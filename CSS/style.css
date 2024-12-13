@@ -192,7 +192,7 @@ color: var(--main-color);
 /* -----------------------------------End NavBar Designs ------------------------------------------ */
 /* ----------------------------------- Start Header Designs ------------------------------------------ */
 header {
-    background-image: url("/images/header-bg.jpg");
+    background-image: url("/images/blog-1.jpg");
     background-size: cover;
     background-position: center;
 }
