@@ -1,0 +1,394 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+a{
+    display: inline-block;
+}
+:root {
+    --main-color : #e65f78;
+}
+body {
+    overflow: hidden;
+}
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
+.fa {
+	width: 60px;
+	display: block;
+	text-align: center;
+	color:#990000;
+	font:normal 45px 'FontAwesome';
+	line-height:60px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+.fa-angle-double-down:before {content: "\f107";}
+
+.bounce {
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-15px);}
+	60% {-webkit-transform: translateY(-8px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+	40% {-webkit-transform: translateY(-15px);transform: translateY(-15px);}
+	60% {-webkit-transform: translateY(-8px);transform: translateY(-8px);}
+}
+
+
+.gear-rotate{
+    -webkit-animation: 1s gear-rotate linear infinite;
+    animation: 1s gear-rotate linear infinite;
+}
+/*
+ * Keyframe Animations 
+ */ 
+
+@-webkit-keyframes gear-rotate {
+  0% { 
+    -webkit-transform: rotate(0deg);
+  }
+  100% { 
+    -webkit-transform: rotate(-180deg); 
+  }
+}
+
+@keyframes gear-rotate {
+  0% { 
+    -webkit-transform: rotate(0deg); 
+            transform: rotate(0deg); 
+  }
+  100% { 
+    -webkit-transform: rotate(-180deg); 
+            transform: rotate(-180deg); 
+  }
+}
+.default-app-btn {
+    background-color: var(--main-color) !important;
+    border: none;
+}
+.default-app-btn:hover {
+    background-color: crimson !important;
+}
+HTML {
+    scroll-padding-top: 68px;
+}
+
+/* ----------------------------------- Start Loading ------------------------------------------ */
+.Loading {
+background-color: #263038;
+ position: fixed;
+ height: 100vh;
+ top: 0;
+ right: 0;
+ left: 0;
+ z-index: 999999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+/* ----------------------------------- End Loading ------------------------------------------ */
+
+/* ----------------------------------- Start NavBar Designs ------------------------------------------ */
+.navbar {
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.active-nav {
+   color: var(--main-color) !important;
+}
+.nav-item .nav-link {
+    color: black;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.nav-item .nav-link:hover {
+color: var(--main-color);
+}
+/* -----------------------------------End NavBar Designs ------------------------------------------ */
+/* ----------------------------------- Start Header Designs ------------------------------------------ */
+header {
+    background-image: url("/images/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.w-60 {
+    width: 60%;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.fs-large {
+    font-size: 70px;
+}
+.header-content .btn {
+    font-size: small;
+}   
+.bottom-40px {
+    bottom: 40px;
+}
+.bottom-10px {
+    bottom: 10px;
+}
+.start-50{
+    right: 50% !important;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.top-30 {
+  top: 30% !important;
+}
+.down-icon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background-color: white;
+  bottom: 8px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.setting{
+    position: fixed;
+    top:290px;
+    left: 0px;
+    z-index: 9999;
+}
+.setting-icon {
+    background-color : saddlebrown;
+    cursor: pointer;
+}
+
+.color-box ul li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* -----------------------------------End Headers Designs ------------------------------------------ */
+/* -----------------------------------Start About Designs ------------------------------------------ */
+.text-main-color{
+    color : var(--main-color)
+}
+.round-circle {
+    border-radius: 50%;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    border: 2px silver solid;
+    border-radius: 50%;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    -webkit-transition: color 250ms,border-color 250ms;
+    -o-transition: color 250ms,border-color 250ms;
+    transition: color 250ms,border-color 250ms;
+}
+.social-links a:hover {
+    cursor: pointer;
+    color : var(--main-color);
+    border-color: var(--main-color); 
+}
+/* -----------------------------------End About Designs ------------------------------------------ */
+/* -----------------------------------Start Service Designs ------------------------------------------ */
+
+.service-card {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+.service-card i {
+    color: var(--main-color) !important;
+}
+.service-card h3::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleX(0.2);
+        -ms-transform: scaleX(0.2);
+            transform: scaleX(0.2);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.service-card:hover.service-card h3::after {
+    -webkit-transform: scaleX(0.4);
+        -ms-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+}
+/* -----------------------------------End Service Designs ------------------------------------------ */
+/* -----------------------------------Start Freelance section Designs ------------------------------------------ */
+.freelancing-section {
+    padding-block: 50px;
+}
+/* -----------------------------------End Freelance section Designs ------------------------------------------ */
+/* -----------------------------------Start Clients section Designs ------------------------------------------ */
+.quote-icon i {
+    font-size: 60px;
+    color: var(--main-color);
+}
+.carousel-indicators button {
+    background-color: var(--main-color) !important;
+    width: 20px  !important;
+}
+.carousel-indicators .active {
+    width: 30px  !important;
+}
+/* -----------------------------------End Clients section Designs ------------------------------------------ */
+/* -----------------------------------Start Our Works section Designs ------------------------------------------ */
+.our-works-list .active {
+    color: white;
+    background-color: var(--main-color);
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+.our-works-list button {
+    cursor: pointer;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    color: black;
+}
+.our-works-list button:hover{
+    color: white;
+    background-color: var(--main-color);
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+.our-works-images .inner::before{
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.our-works-images .inner .overlay {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    border-radius: var(--bs-border-radius) !important;;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+.our-works-images .inner .overlay:hover {
+    opacity: 1;
+}
+/* -----------------------------------End Our works section Designs ------------------------------------------ */
+/* -----------------------------------Start Our Blog section Designs ------------------------------------------ */
+
+/* -----------------------------------End Our Blog section Designs ------------------------------------------ */
+
+/* -----------------------------------start Our Contact section Designs ------------------------------------------ */
+.contact-card i {
+    color: var(--main-color);
+}
+/* -----------------------------------End Our Contact section Designs ------------------------------------------ */
